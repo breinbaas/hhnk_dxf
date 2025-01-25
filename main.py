@@ -4,30 +4,13 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon as mplPolygon
 import numpy as np
 
-import networkx as nx
+
 from shapely.geometry import LineString, Polygon, MultiPolygon
 from shapely.ops import polygonize, unary_union
 
 
 DXF_FILE = "data/test.dxf"
 DEBUG = False
-
-
-# def extract_polygons_from_lines(lines):
-#     # Step 1: Build a graph
-#     G = nx.Graph()
-#     for line in lines:
-#         coords = list(line.coords)
-#         for i in range(len(coords) - 1):
-#             G.add_edge(coords[i], coords[i + 1])
-
-#     # Step 2: Find all cycles in the graph
-#     cycles = nx.cycle_basis(G)
-
-#     # Step 3: Convert cycles to polygons
-#     polygons = [Polygon(cycle) for cycle in cycles if len(cycle) > 2]
-
-#     return polygons
 
 
 def generate_random_color():

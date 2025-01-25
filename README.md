@@ -2,6 +2,8 @@
 
 Dit script converteert DXF bestanden die binnen HHNK gemaakt worden naar Deltares DStability (stix) bestanden.
 
+* 25/01/2025 het script is nog in ontwikkeling (nog niet werkzaam)
+
 ## DXF eisen
 
 Het script werkt met het DXF format dat HHNK gedefinieerd heeft. Bij dit format bestaat het maaiveld uit een lwpolyline.
@@ -27,5 +29,15 @@ gebruik van de main branch van geolib is als volgt;
 **let op** als er een IDE open stond tijdens dit proces zijn de wijziging pas werkzaam als de IDE herstart wordt
 
 Download de code van het script via;
-* git clone 
+* git clone ```git@github.com:breinbaas/hhnk_dxf.git```
+* ga naar de directory met de code en maak een virtuele omgeving aan; ```python -m venv .venv```
+* installeer de benodigde packages ```python -m pip install -r requirements.txt```
+* **zorg ervoor dat er een verwijzing is naar de main branch van geolib zoals eerder beschreven**
+
+## Script uitvoeren
+* activeer de virtuele omgeving ```.venv/scripts/activate```
+* plaats de DXF bestanden in de de ```/data``` directory 
+* run het script ```python main.py```
+* in de data directory worden stix bestanden gegenereerd met dezelfde naam als het dxf bestand maar met ```stix``` als extensie
+
 
