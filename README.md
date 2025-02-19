@@ -3,9 +3,11 @@
 Dit script converteert DXF bestanden die binnen HHNK gemaakt worden naar Deltares DStability (stix) bestanden.
 
 * 13/02/2025 het script werkt voor DXF tekeningen waarbij aan de onderstaande eisen wordt voldaan, er wordt nog onderzocht hoe het script werkt met polygon DXF tekeningen
+* 19/02/2025 het script main2 werkt voor **alle** DXF tekeningen, de rekentijd is significant langer (30-60 seconden per DXF)
 
-## DXF eisen
+## DXF eisen 
 
+### Eisen voor main.py
 Het script werkt met het DXF format dat HHNK gedefinieerd heeft. Bij dit format bestaat het maaiveld uit een lwpolyline.
 De linker- en rechter begrenzingen van de geometrie zijn gedefinieerd als een enkele lwpolyline van de onderzijde tot
 de bovenzijde (en bevat dus **niet** de snijpunten met de tussenliggende lagen).
@@ -14,6 +16,9 @@ De overige lijnen die de grondlagen weergeven zijn losse lijnen. Alle punten van
 onderdeel van het maaiveld. 
 
 Het script werkt met deze aanname en bij wijzigingen in dit format is niet gegarandeerd dat het script goede resultaten oplevert.
+
+### Eisen voor main2.py
+Het script is getest met DXF bestanden bestaande uit LINES, POLYLINES en LWPOLYLINES
 
 ## Installatie
 
